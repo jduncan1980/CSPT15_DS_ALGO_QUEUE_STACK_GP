@@ -34,16 +34,19 @@ class Queue:
         if self.front is None:
             # make sure rear is also None
             self.rear = None
-        
+            return "Nothing left in queue"
         return old_front
+    
+    def is_empty(self):
+        return self.front == None
 
 
 # test
 
-# q = Queue()
-# print(q.is_empty()) # => True
-# q.enqueue(12)
-# print(q.is_empty()) # => False
-# q.dequeue()
-# print(q.is_empty()) # => True
+q = Queue()
+print(q.is_empty()) # => True
+q.enqueue(12)
+print(q.is_empty()) # => False
+q.dequeue()
+print(q.is_empty()) # => True
 

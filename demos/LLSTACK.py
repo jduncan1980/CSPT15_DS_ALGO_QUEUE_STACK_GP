@@ -26,3 +26,8 @@ class Stack:
             self.top = popped_node.next
             # return the value from the popped node
             return popped_node.data
+    
+    def peek(self):
+        if self.top:
+            return self.top.data
+        return 'Stack is empty!'
